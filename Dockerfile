@@ -1,8 +1,8 @@
-FROM easypi/alpine-arm:3.7
+FROM easypi/alpine-arm:3.8
 
 LABEL Description="ARM Based Eclipse Mosquitto MQTT Broker"
 
-RUN apk --no-cache add mosquitto=1.4.15-r0 && \
+RUN apk --no-cache add mosquitto=1.4.15-r3 && \
     mkdir -p /mosquitto/config /mosquitto/data /mosquitto/log && \
     cp /etc/mosquitto/mosquitto.conf /mosquitto/config && \
     chown -R mosquitto:mosquitto /mosquitto
